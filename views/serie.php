@@ -3,6 +3,6 @@
 
 <div class="temporadas">
 	<?php foreach ($temporadas as $temporada): ?>
-		<a href="<?php echo BASE_URL; ?>episodios/<?php echo $info['slug'] ?>/<?php echo $info['id'] ?>/<?php echo $temporada['id'] ?>" class="btn btn-temporada"><?php echo $temporada['nome']; ?></a>
+		<a href="<?php echo BASE_URL; ?>serie/<?php echo $info['slug'] ?>/<?php echo $info['id'] ?>/<?php echo $temporada['id'] ?>" class="btn btn-temporada"><?php echo $temporada['nome']; ?></a>
 	<?php endforeach; ?>
 </div>
