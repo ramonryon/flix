@@ -17,11 +17,11 @@ class Series extends model{
 		return $array;
 	}
 
-	public function getSerie($id){
+	public function getSerie($slug){
 		$array = array();
 
-		$sql = $this->db->prepare("SELECT * FROM series WHERE id = :id");
-		$sql->bindValue(":id", $id);
+		$sql = $this->db->prepare("SELECT * FROM series WHERE slug = :slug");
+		$sql->bindValue(":slug", $slug);
 		$sql->execute();
 
 		if($sql->rowCount() > 0){

@@ -6,19 +6,19 @@ class desenhoController extends controller{
 
 	}
 
-	public function assistir($id){
+	public function assistir($slug){
 		$dados = array();
 		$temporadas = array();
 
 		$d = new Desenhos();
 		$t = new Temporadas();
 
-		if(empty($id)){
+		if(empty($slug)){
 			header("Location: ".BASE_URL);
 			exit;
 		}
 
-		$info = $d->getDesenho($id);
+		$info = $d->getDesenho($slug);
 		$qt = $info['qt_temporadas'];
 
 		

@@ -16,11 +16,11 @@ class Desenhos extends model{
 		return $array;
 	}
 
-	public function getDesenho($id){
+	public function getDesenho($slug){
 		$array = array();
 
-		$sql = $this->db->prepare("SELECT * FROM desenhos WHERE id = :id");
-		$sql->bindValue(":id", $id);
+		$sql = $this->db->prepare("SELECT * FROM desenhos WHERE slug = :slug");
+		$sql->bindValue(":slug", $slug);
 		$sql->execute();
 
 		if($sql->rowCount() > 0){

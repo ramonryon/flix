@@ -6,45 +6,45 @@ class episodiosController extends controller{
 
 	}
 
-	public function listarDesenho($desenho, $temporada){
+	public function listarDesenho($desenho, $id, $temporada){
 		$dados = array();
 
 		$e = new Episodios();
 
-		$episodios = $e->getEpisodiosDesenhos($desenho, $temporada);
+		$episodios = $e->getEpisodiosDesenhos($desenho, $id, $temporada);
 		$dados['episodios'] = $episodios;
 
 		$this->loadTemplate('episodios', $dados);
 	}
 
-	public function abrirDesenho($id, $item, $temporada){
+	public function abrirDesenho($slug, $item, $temporada){
 		$dados = array();
 
 		$e = new Episodios();
 
-		$episodio = $e->getEpisodioDesenho($id, $item, $temporada);
+		$episodio = $e->getEpisodioDesenho($slug, $item, $temporada);
 		$dados['episodio'] = $episodio;
 
 		$this->loadTemplate('episodio', $dados);
 	}
 
-	public function listarSerie($serie, $temporada){
+	public function listarSerie($serie, $id, $temporada){
 		$dados = array();
 
 		$e = new Episodios();
 
-		$episodios = $e->getEpisodiosSeries($serie, $temporada);
+		$episodios = $e->getEpisodiosSeries($serie, $id, $temporada);
 		$dados['episodios'] = $episodios;
 
 		$this->loadTemplate('episodios', $dados);
 	}
 
-	public function abrirSerie($id, $item, $temporada){
+	public function abrirSerie($slug, $item, $temporada){
 		$dados = array();
 
 		$e = new Episodios();
 
-		$episodio = $e->getEpisodioSerie($id, $item, $temporada);
+		$episodio = $e->getEpisodioSerie($slug, $item, $temporada);
 		$dados['episodio'] = $episodio;
 
 		$this->loadTemplate('episodio', $dados);
