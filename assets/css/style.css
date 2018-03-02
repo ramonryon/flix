@@ -1,0 +1,161 @@
+*{
+  border: none;
+  outline: none; 
+  padding: 0;
+  margin: 0;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-weight: lighter;
+  color: #fff;
+  text-shadow: 1px 2px #000;
+}
+
+body {
+  background: #333;
+}
+button{
+  cursor: pointer;
+}
+p{
+  text-align: justify;
+}
+
+.container{
+  margin-bottom: 20px;
+}
+
+.video{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.jwplayer{
+  box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.8);
+}
+.tit-ep{
+  font-size: 26px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+hr{
+  color: #fff;
+  background-color: #fff;
+  height: 2px;
+}
+.escolher{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.escolher .escolher-item{
+  text-align: center;
+  margin: 30px 50px 0 0;
+  width: 371px;
+}
+.escolher .escolher-item img{
+  width: 371px;
+  height: 250px;
+  box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.5);
+}
+
+a{
+  transition: 0.3s;
+}
+a:hover{
+  filter: brightness(40%);
+}
+a h3{
+  transition: 0.3s;
+}
+a:hover h3{
+  color: #FCC314;
+  text-shadow: 1px 1px #000;
+}
+
+.temporadas{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.btn-temporada{
+  background-color: #FCC314 !important;
+  font-weight: bold;
+  width: 200px;
+  margin: 20px 10px 0 10px;
+}
+.episodios{
+  margin: 30px 0;
+  display: flex;
+  flex-flow: column wrap;
+}
+.btn-episodio{
+  background-color: #333 !important;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.escolher .escolher-itens .item-headline{
+  font-size: 30px;
+}
+.itens{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.item{
+  text-align: center;
+  width: 170px;
+  margin: 15px 9px;
+}
+.item img{
+  width: 170px;
+  height: 250px;
+  box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.75);
+}
+
+.item .item-headline{
+  font-size: 22px;
+}
+
+@media (max-width: 768px){
+  .escolher{
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    height: 100vh;
+  }
+  .escolher .escolher-item{
+    text-align: center;
+    margin: 20px 0 0 0;
+    width: 288px !important;
+  }
+  .escolher .escolher-item img{
+    width: 288px;
+    height: 189px;
+    box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.5);
+  }
+  .item-headline{
+    margin-top: 2px;
+    font-size: 22px;
+  }
+  .btn-temporada{
+    background-color: #FCC314 !important;
+    font-weight: bold;
+    width: 200px;
+    margin: 20px 10px 0 10px;
+  }
+  .episodio .btn{
+    text-align: left !important;
+    height: 60px !important;
+    width: 280px;
+    padding: 10px 5px;
+    line-height: 20px !important;
+  }
+  .jwplayer{
+    width: 320px !important;
+    height: 240px !important;
+  }
+}
